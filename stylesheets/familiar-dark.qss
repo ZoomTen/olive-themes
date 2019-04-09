@@ -1,0 +1,106 @@
+/*
+About
+-----
+    "Familiar-Dark"
+    This is a Qt CSS theme for Olive Video Editor (https://olivevideoeditor.org/)
+    It makes use of special classes that Olive uses, therefore it is not necessarily
+    a general-purpose Qt CSS theme.
+    It is inspired by the Adobe Premiere user interface.
+
+License
+-------
+    (c) 2019 ZoomTen
+    This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
+    To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
+
+Todo
+----
+    - style progress bars
+    - figure out how to put custom images instead of using olive's default icons
+*/
+
+/* base dark style */
+MainWindow, MainWindow *{background-color:rgb(35,35,35); color:white;}
+
+/* separators */
+QMainWindow::separator {
+    background:rgb(26,26,26);
+    border: 0;
+    spacing: 0;
+    padding: 0;
+}
+
+QSplitter{background:rgb(20,20,20)}
+
+/* effects panel */
+EffectControls QWidget QSplitter QScrollArea *{background:rgb(30,30,30)}
+
+/* fix qmenu */
+QMenu:hover,QMenu::item:selected{background-color:rgb(42, 130, 218);}
+
+/* buttons */
+QPushButton{border:none;padding:2px 0;border-radius:5px;spacing:2px; background:#333}
+QPushButton:disabled{ background-color: rgb(70,70,70); }
+QPushButton:checked{ background-color: black; }
+
+/* text buttons */
+QPushButton[text]{color:#ddd;font-weight:bold;background-color:transparent;border:2px solid #ddd;padding:2px 10px;border-radius:9px;}
+QPushButton[text]:hover{background-color:#ddd;border-color:#ddd;color:rgb(53,53,53)}
+QPushButton[text]:pressed{background-color:rgb(42, 130, 218);border-color:rgb(42, 130, 218);color:#eee}
+
+/* toolbars */
+#project_toolbar,
+#timeline_toolbar{background:rgb(23,23,23)}
+
+/* icon padding */
+#project_toolbar *,
+#timeline_toolbar *{padding:2px; margin:3px}
+
+/* tabs */
+QTabBar::tab{background-color:transparent;border:none;padding:8px;}
+QTabBar::tab:selected{border-bottom:4px solid rgb(42, 130, 218);}
+
+/* input */
+QLineEdit, QTextEdit, QSpinBox, QComboBox{background-color:rgb(25,25,25);border:1px solid rgb(64,64,64);padding:3px;}
+QLineEdit, QTextEdit{border-radius:2px;}
+QSpinBox, QComboBox{border-radius:6px;}
+
+/* spinbox and combobox, borrowed from qt's example styles */
+QSpinBox::up-button {
+    subcontrol-origin: border;
+    subcontrol-position: top right;
+    width: 10px;
+    border-image: url(:/icons/tri-up.svg) 1;
+    border-width: 1px;
+    margin-right:3px;
+}
+QSpinBox::down-button {
+    subcontrol-origin: border;
+    subcontrol-position: bottom right;
+    width: 10px;
+    border-image: url(:/icons/tri-down.svg) 1;
+    border-width: 1px;
+    margin-right:3px;
+}
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 16px;
+    border:none;
+}
+QComboBox::down-arrow {
+    border-image: url(:/icons/tri-down.svg) 1;
+    border-width: 1px;
+}
+
+/* tick boxes */
+QCheckBox::indicator{background:#111;border:1px solid #888;width:13px;height:13px}
+QCheckBox::indicator:checked{image: url(:/icons/tri-down.svg);background:#333;} /* this isn't it lol */
+
+
+/* scrollbars */
+QScrollBar:horizontal{height:8px;background-color:rgb(40,40,40);}
+QScrollBar:vertical{width:8px;background-color:rgb(40,40,40);}
+QScrollBar::add-line {border: 2px solid white;border-radius:4px;}
+QScrollBar::sub-line {border: 2px solid white;border-radius:4px;}
+QScrollBar::handle{background-color:rgba(100,100,100,0.5);border:none;border-radius:3px;}Z

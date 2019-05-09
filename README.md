@@ -14,7 +14,7 @@ This is a repo for Qt CSS themes made for [Olive Video Editor](https://github.co
 * Pick a `qss` file, click Open.
 * Click OK. Olive should warn about a restart.
 * Click Yes, and save your work.
-* The theme should be applied to Olive at this point. How it looks depends on your operating system and Qt 5 settings.
+* The theme should be applied to Olive at this point. How it looks may be different, depending on your operating system and Qt 5 settings.
 
 ## Contributing
 Fork the repo, write your QSS file in the `stylesheets` directory, and create a [pull request](https://github.com/zoomten/olive-themes/pulls). It may take time for it to be merged.
